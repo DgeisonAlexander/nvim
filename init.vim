@@ -89,3 +89,4 @@ nnoremap <c-p> :Files<cr>
 " Mapeando a procura junto com silverseacher para pesquisas de diversas 
 " ocorrências dentro do seu projeto 
 nnoremap <c-f> :Ag<space> 
+" #########################################################################
