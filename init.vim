@@ -45,6 +45,10 @@ let g:UltiSnipsSnippetsDir = '~/.config/nvim/UltiSnips'
 " na memória 
 set hidden 
 
+" Habilita sintaxe e plugins (para netrw)
+syntax enable
+filetype plugin on
+
 " Ativa o tema GRUVBOX 
 colorscheme gruvbox 
 
@@ -61,7 +65,26 @@ set relativenumber
 set mouse=a 
 
 " Mostra interação com comandos em tempo real 
-set inccommand=split 
+set inccommand=split
+
+" ###################   Encontrando Arquivos   ##################
+" Procura dentra das subpastas, porem temos que utiliza-lo com um novo arquivo
+" Fornece completar com o tab para todos os arquivos relacionados
+set path+=**
+
+" Mostra todas as correspondencias de arquivos quando apertamos TAB
+set wildmenu
+
+" ############   O QUE MAIS PODEMOS FAZER   ############
+"
+"  - Apertando TAB para: encontrar parcial ou correspondente
+"  - Usamos * para executarmos um FUZZY
+"
+"  - :b Deixa voce autocompletar com um buffer aberto
+
+" ################   TAG JUMPING   ################
+" Cria uma tag no arquivo (deve-se instalar o ctags primeiro)
+set tags=./tags,tags;$HOME
 
 " ####################   Atalhos   ######################## 
 " Mapeando a tecla de espaço para ser a leader key 
